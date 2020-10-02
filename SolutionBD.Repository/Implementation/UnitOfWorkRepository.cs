@@ -17,14 +17,14 @@ namespace SolutionBD.Repository.Implementation
             _context = context;
         }
 
-        public IGenericRepository<AdminModel> EmployeeRepository
+        public IGenericRepository<AdminModel> AdminModel
         {
             get { return _modelRepository ?? (_modelRepository = new GenericRepository<AdminModel>(_context)); }
         }
 
 
 
-        public async Task<int> Save()
+        public async Task<int> SaveUnitOfWork()
         {
             var response = await _context.SaveChangesAsync();
             return response;

@@ -15,14 +15,15 @@ namespace SolutionBD.Controllers
     public class AdminController : ControllerBase
     {
         private readonly IAdminService<AdminModel> _adminService;
-        public AdminController(AdminService<AdminModel> adminService)
+        public AdminController(IAdminService<AdminModel> adminService)
         {
             _adminService = adminService;
         }
-        [HttpGet("test")]
+        [HttpPost("test")]
         public async Task<IActionResult> AddAdmin([FromBody] AdminModel adminModel)
         {
             var response = await _adminService.AddAdmin(adminModel);
+
             return Ok(response);
         }
     }

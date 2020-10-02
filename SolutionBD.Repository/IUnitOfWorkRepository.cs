@@ -10,6 +10,6 @@ namespace SolutionBD.Repository
     {
 
         IGenericRepository<AdminModel> AdminModel { get; }
-        Task<int> Save();
+        Task<int> SaveUnitOfWork();
     }
 }

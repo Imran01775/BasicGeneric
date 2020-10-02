@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SolutionBD.Repository
 {
-    public interface IGenericRepository<TEntity>
+    public interface IGenericRepository<TEntity> where TEntity : class
     {
 
         IEnumerable<TEntity> Get(
