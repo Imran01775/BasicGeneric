@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SolutionBD.DataContext\SolutionBD.DataContext.csproj" />
+    <ProjectReference Include="..\SolutionBD.Service\SolutionBD.Service.csproj" />
   </ItemGroup>
 
 

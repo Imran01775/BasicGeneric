@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SolutionBD.Domain\SolutionBD.Domain.csproj" />
+    <ProjectReference Include="..\SolutionBD.Repository\SolutionBD.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
