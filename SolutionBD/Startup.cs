@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SolutionBD.DataContext;
+using SolutionBD.Middleware;
 using SolutionBD.Repository;
 using SolutionBD.Repository.Implementation;
 using SolutionBD.Service;
@@ -47,7 +48,7 @@ namespace SolutionBD
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCustomMultipleHandler();
             app.UseHttpsRedirection();
 
             app.UseRouting();
