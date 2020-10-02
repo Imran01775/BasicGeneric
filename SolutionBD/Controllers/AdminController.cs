@@ -14,8 +14,8 @@ namespace SolutionBD.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
-        private readonly IAdminService<AdminModel> _adminService;
-        public AdminController(IAdminService<AdminModel> adminService)
+        private readonly IAdminService _adminService;
+        public AdminController(IAdminService adminService)
         {
             _adminService = adminService;
         }

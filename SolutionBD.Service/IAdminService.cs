@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SolutionBD.Service
 {
-    public interface IAdminService<TEntity> where TEntity : class
+    public interface IAdminService 
     {
         Task<AdminModel> AddAdmin(AdminModel adminModel);
     }

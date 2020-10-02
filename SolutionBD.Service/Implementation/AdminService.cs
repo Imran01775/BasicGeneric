@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SolutionBD.Service.Implementation
 {
-    public class AdminService<TEntity> : IAdminService<TEntity> where TEntity : class
+    public class AdminService : IAdminService
     {
 
         //private readonly IGenericRepository<AdminModel> _adminService;

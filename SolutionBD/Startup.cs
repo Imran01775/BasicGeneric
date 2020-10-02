@@ -35,7 +35,7 @@ namespace SolutionBD
             services.AddControllers();
             services.AddDbContext<SqlServerDBContext>(options => options.UseSqlServer(Configuration["DbConnection:SolutionBDContext"]));
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddTransient(typeof(IAdminService<>), typeof(AdminService<>));
+            services.AddTransient<IAdminService, AdminService>();
             services.AddTransient<IUnitOfWorkRepository, UnitOfWorkRepository>();
             services.AddSwagger();
         }
