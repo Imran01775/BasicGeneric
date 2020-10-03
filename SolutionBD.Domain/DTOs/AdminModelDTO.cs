@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace SolutionBD.Domain.Entity
+namespace SolutionBD.Domain.DTOs
 {
-    [Table(name: "Admin", Schema = "tsb")]
-    public class AdminModel
+    public class AdminModelCreate
     {
-        public int Id { set; get; }
+
         public string FirstName { set; get; }
         public string LastName { set; get; }
         public string Address { set; get; }
@@ -21,10 +19,20 @@ namespace SolutionBD.Domain.Entity
         public string AlternativeMobile { set; get; }
 
         public string Password { set; get; }
-        public int CreatedBy { set; get; }
-        public int UpdatedBy { set; get; }
-        public DateTime CreatedDate { set; get; } = DateTime.Now;
-        public DateTime? UpdatedDate { set; get; }
+        public string ConfirmPassword { set; get; }
 
+
+    }
+    public class AdminModelUpdate
+    {
+        public int Id { set; get; }
+        public string FirstName { set; get; }
+        public string LastName { set; get; }
+        public string Address { set; get; }
+
+        public string Email { set; get; }
+        public string Mobile { set; get; }
+
+        public string AlternativeMobile { set; get; }
     }
 }
